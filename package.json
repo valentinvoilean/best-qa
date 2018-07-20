@@ -19,14 +19,14 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "renameBuildToDocs": "rm -rf docs && mv build docs && cp CNAME docs/CNAME",
-    "addDocsToGit": "git add docs",
+    "addFilesToGit": "git add .",
     "lint": "prettier --config ./.prettierrc --write \"src/**/*.js\" && standard \"src/**/*.js\" --fix"
   },
   "pre-commit": [
     "lint",
     "build",
     "renameBuildToDocs",
-    "addDocsToGit"
+    "addFilesToGit"
   ],
   "standard": {
     "env": [ "jest" ]
