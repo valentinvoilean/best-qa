@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "normalize.css": "^8.0.0",
-    "query-string": "^6.1.0",
+    "qs": "^6.5.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-flexbox-grid": "^2.1.2",
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && rm -rf docs && mv build docs",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
