@@ -2,9 +2,11 @@ import React from 'react'
 
 import { GridPreview } from './components'
 
+import { Home } from './screens/Home';
+
 const App = () => (
   <div className={'App'}>
-    <h1>Hello World</h1>
+    <Home />
     <GridPreview />
   </div>
 )
