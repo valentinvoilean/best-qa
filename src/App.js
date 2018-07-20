@@ -7,6 +7,7 @@ import { Home } from './screens/Home';
 const App = () => (
   <div className={'App'}>
     <Home />
+
     <GridPreview />
   </div>
 )
