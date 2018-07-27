@@ -18,22 +18,24 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "renameBuildToDocs": "rm -rf docs && mv build docs && cp CNAME docs/CNAME",
     "addFilesToGit": "git add .",
-    "lint": "prettier --config ./.prettierrc --write \"src/**/*.js\" && standard \"src/**/*.js\" --fix"
+    "lint": "prettier --config ./.prettierrc --write \"src/**/*.js\" && standard \"src/**/*.js\" --fix",
+    "deploy": "npm run build && mv build/index.html build/200.html && surge build best-qa.com"
   },
   "pre-commit": [
     "lint",
     "build",
-    "renameBuildToDocs",
     "addFilesToGit"
   ],
   "standard": {
-    "env": [ "jest" ]
+    "env": [
+      "jest"
+    ]
   },
   "devDependencies": {
     "pre-commit": "^1.2.2",
     "prettier": "^1.13.7",
-    "standard": "^11.0.1"
+    "standard": "^11.0.1",
+    "surge": "^0.20.1"
   }
 }
